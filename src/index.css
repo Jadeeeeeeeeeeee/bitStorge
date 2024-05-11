@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+html,body, #root{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(0, 102, 255) 0%, rgb(41, 45, 68) 100%);
+}
+
