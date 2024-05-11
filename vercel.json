@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "headers": {
+          "cache-control": "s-maxage=31536000, immutable"
+        },
+        "continue": true
+      },
+      {
+        "src": "^/((?!favicon.ico|robots.txt).*)$",
+        "dest": "/index.html",
+        "status": 200
+      }
+    ]
+  }
