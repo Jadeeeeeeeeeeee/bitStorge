@@ -2,8 +2,8 @@ import Ilu from '../assets/Ilustration.png'
 
 function Home() {
     return(<>
-    <div className="h-17/20 w-screen absolute flex md:flex-row flex-col  items-center">
-          <div className="md:w-6/10 w-10/10 flex flex-col gap-y-2 md:gap-y-5 md:mb-40 items-center mt-60 verysm:mt-96 md:mt-40 z-10">
+    <div className="h-17/20 w-screen absolute flex md:flex-row flex-col items-center">
+          <div className="md:w-6/10 w-10/10 flex flex-col gap-y-2 md:gap-y-5 md:mb-40 items-center md:mt-40 z-10">
             <h1 className="md:text-25/10 text-15/10 md:w-8/10 w-7/10 mt-20" >
                 <span className="text-white">Host </span>
                 <span className="font-bold underline text-red-600">YOUR </span>
