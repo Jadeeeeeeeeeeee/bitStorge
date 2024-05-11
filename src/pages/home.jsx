@@ -11,7 +11,7 @@ function Home() {
             </h1>
             <p className="text-white md:text-15/10 w-7/10 md:w-8/10 ">our servers are designed for afordability and easy access for beginners and intermediateslook at our pricing and pick the plan that fits youand check our well explained documentation</p>
             <img src={Ilu} className='md:hidden visible h-1/2 z-0 md:h-7/10 md:mb-20 mb-20'/>
-            <a href="" className='mt-20 h-2/10 w-1/2 md:h-1/10 md:w-3/10 lg:w-2/10 lg:text-20/10 bg-DocsPink text-center flex justify-center items-center mb-14 pb-5 pt-5 rounded-full text-white text-15/10'>docs</a>
+            <a href="" className='mt-20 h-2/10 w-1/2 md:h-1/10 md:w-3/10 lg:w-2/10 lg:text-20/10 bg-DocsPink text-center flex justify-center items-center mb-14 pb-5 pt-5 rounded-3xl sm:rounded-full lg:rounded-full xl:rounded-full 3xl:rounded-full md:rounded-full text-white text-15/10'>docs</a>
           </div>
           <img src={Ilu} className="hidden md:block h-1/2 z-0 md:h-7/10 mb-20" />
     </div>
