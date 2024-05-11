@@ -81,6 +81,7 @@ export default {
   
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
+        '3xl' : '2000px',
       },
       margin: {
         '1/10' : '10%',
