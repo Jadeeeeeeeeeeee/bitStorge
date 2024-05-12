@@ -4,14 +4,12 @@ import Pricing from "./pages/pricing"
 import OtherProducts from "./pages/otherProducts"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 function App() {
-
   return (
     <>
     <Router>
        <SideBar/>
-         <Routes>
+       <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Pricing" element={<Pricing/>}/>
           <Route path="/OtherProducts" element={<OtherProducts/>}/>

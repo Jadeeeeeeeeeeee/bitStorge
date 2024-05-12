@@ -49,8 +49,7 @@ export default {
       colors: {
         'DocsPink': '#DB00FF',
         'buyButton' : 'rgb(91, 91, 91)',
-      },backgroundImage: {
-        'il': "url('../assets/Ilustration.png')",
+        'footerBlack' : '#202020',
       },
       inset:{
         '1/10' : '10%',
