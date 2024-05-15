@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '../assets/Icon.png'
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
@@ -20,6 +20,13 @@ function SideBar() {
         setIsOpen(!isOpen);
       }
     
+      useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+        // Clean up function to reset overflow when component unmounts
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isOpen]);
 
     return(<>
     <div className='w-full h-3/20 flex items-center '>
@@ -32,7 +39,7 @@ function SideBar() {
         <Link  to="/Pricing" className={`ml-7 verysm:ml-4 sm:ml-32 md:ml-14 lg:ml-20 sm:text-15/10 lg:text-20/10 md:text-15/10 text-10/10 underline-offset-8	 ${isActive('/Pricing') ? 'underline' : 'no-underline'}`}>Pricing</Link>
         <Link  to="/OtherProducts" className={`ml-7 verysm:ml-4 sm:ml-32 md:ml-14 lg:ml-20 sm:text-15/10 lg:text-20/10 md:text-15/10 text-10/10 underline-offset-8	 ${isActive('/OtherProducts') ? 'underline' : 'no-underline'}`}>Other Products</Link>
         </div>
-        <div className={` visible midSm:hidden h-screen w-7/10 bg-blue-950 absolute ${isOpen ? '-left-0' : '-left-full'} top-0 z-50 transition-all duration-500`}>
+        <div className={`fixed h-screen w-8/10 inset-0 z-50 bg-blue-950 transition-all duration-500 flex flex-col ${isOpen ? '-inset-x-10/10' : 'inset-x-0'}`}>
          <div className='w-full h-3/20 flex flex-row items-center justify-between'>
             <img  src={Logo} className='ml-3 lg:h-20 3xl:w-32 3xl:h-32 md:h-20 size-16 sm:w-20 lg:w-20 md:w-20 ml-2sm:ml-10 lg:ml-10 md:ml-10 shrink-0 grow-0 userDrag hover:cursor-pointer'/>
             <MdOutlineCancel onClick={toggleSidebar} className='mr-1 text-red-600 block midSm:hidden lg:h-20 3xl:w-32 3xl:h-32 md:h-20 size-18 sm:w-20 lg:w-20 md:w-20 ml-2sm:ml-10 lg:ml-10 md:ml-10 shrink-0 grow-0 userDrag hover:cursor-pointer '/>
