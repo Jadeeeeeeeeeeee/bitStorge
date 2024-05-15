@@ -62,9 +62,13 @@ export default {
         '8/10' : '80%',
         '9/10' : '90%',
         '10/10' : '100%',
+        '-10/10' : '-100%'
       },
       screens: {
+        
         'verysm' : '320px',
+
+        'midSm' : '430px',
 
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
@@ -96,6 +100,9 @@ export default {
       },
       borderRadius: {
         '4xl' : '3rem',
+      },
+      spacing: {
+        '18' : '72px',
       },
     },
   },
